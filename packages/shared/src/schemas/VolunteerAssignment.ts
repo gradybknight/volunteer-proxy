@@ -5,8 +5,8 @@ export const VolunteerAssignment = S.Struct({
   volunteerId: S.UUID,
   eventId: S.UUID,
   fulfilled: S.Boolean,
-  assignedAt: S.Date,
-  fulfilledAt: S.NullOr(S.Date),
+  assignedAt: S.DateFromSelf,
+  fulfilledAt: S.NullOr(S.DateFromSelf),
 })
 
 export type VolunteerAssignment = S.Schema.Type<typeof VolunteerAssignment>

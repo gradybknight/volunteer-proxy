@@ -4,13 +4,13 @@ export const Event = S.Struct({
   id: S.UUID,
   title: S.String.pipe(S.minLength(1), S.maxLength(200)),
   description: S.String,
-  date: S.Date,
+  date: S.DateFromSelf,
   startTime: S.String.pipe(S.pattern(/^([0-1][0-9]|2[0-3]):[0-5][0-9]$/)),
   endTime: S.String.pipe(S.pattern(/^([0-1][0-9]|2[0-3]):[0-5][0-9]$/)),
   location: S.String.pipe(S.minLength(1)),
   createdById: S.UUID,
-  createdAt: S.Date,
-  updatedAt: S.Date,
+  createdAt: S.DateFromSelf,
+  updatedAt: S.DateFromSelf,
 })
 
 export type Event = S.Schema.Type<typeof Event>
@@ -28,7 +28,7 @@ export type ValidEvent = S.Schema.Type<typeof ValidEvent>
 export const CreateEventRequest = S.Struct({
   title: S.String.pipe(S.minLength(1), S.maxLength(200)),
   description: S.String,
-  date: S.Date,
+  date: S.DateFromSelf,
   startTime: S.String.pipe(S.pattern(/^([0-1][0-9]|2[0-3]):[0-5][0-9]$/)),
   endTime: S.String.pipe(S.pattern(/^([0-1][0-9]|2[0-3]):[0-5][0-9]$/)),
   location: S.String.pipe(S.minLength(1)),

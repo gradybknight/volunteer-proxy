@@ -15,7 +15,7 @@ export const Notification = S.Struct({
   message: S.String.pipe(S.minLength(1)),
   relatedRequestId: S.NullOr(S.UUID),
   read: S.Boolean,
-  createdAt: S.Date,
+  createdAt: S.DateFromSelf,
 })
 
 export type Notification = S.Schema.Type<typeof Notification>

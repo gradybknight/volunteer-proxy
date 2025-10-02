@@ -11,9 +11,9 @@ export const Request = S.Struct({
   eventId: S.UUID,
   status: RequestStatus,
   volunteerAssignmentId: S.UUID,
-  createdAt: S.Date,
-  respondedAt: S.NullOr(S.Date),
-  updatedAt: S.Date,
+  createdAt: S.DateFromSelf,
+  respondedAt: S.NullOr(S.DateFromSelf),
+  updatedAt: S.DateFromSelf,
 })
 
 export type Request = S.Schema.Type<typeof Request>

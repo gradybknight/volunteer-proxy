@@ -11,8 +11,8 @@ export const User = S.Struct({
   role: UserRole,
   firstName: S.String.pipe(S.minLength(1)),
   lastName: S.String.pipe(S.minLength(1)),
-  createdAt: S.Date,
-  updatedAt: S.Date,
+  createdAt: S.DateFromSelf,
+  updatedAt: S.DateFromSelf,
 })
 
 export type User = S.Schema.Type<typeof User>
