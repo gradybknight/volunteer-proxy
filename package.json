@@ -1,0 +1,28 @@
+{
+  "name": "volunteer-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Volunteer-Proxy Matching System for Youth Sports Events",
+  "scripts": {
+    "build": "pnpm --filter shared build && pnpm --filter backend build && pnpm --filter frontend build",
+    "dev": "pnpm --parallel --filter backend dev --filter frontend dev",
+    "test": "pnpm --recursive test",
+    "test:contract": "pnpm --recursive test:contract",
+    "test:integration": "pnpm --filter backend test:integration",
+    "lint": "pnpm --recursive lint",
+    "clean": "pnpm --recursive clean"
+  },
+  "keywords": ["volunteer", "proxy", "matching", "youth-sports"],
+  "author": "",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

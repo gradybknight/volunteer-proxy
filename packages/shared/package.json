@@ -1,0 +1,23 @@
+{
+  "name": "@volunteer-proxy/shared",
+  "version": "1.0.0",
+  "description": "Shared effect-ts schemas and types for volunteer-proxy system",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:contract": "vitest run --config vitest.contract.config.ts"
+  },
+  "dependencies": {
+    "@effect/schema": "^0.67.0",
+    "effect": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  }
+}
